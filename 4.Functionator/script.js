@@ -70,6 +70,11 @@ function addFun (val) {
     span.addEventListener("mouseout", function () {
         this.style.backgroundColor="white";
      });
+    span.addEventListener("click", function () {
+        let currentIndex = fun.indexOf(this);
+        let removedElement = fun.splice(currentIndex,1);
+        functionList.removeChild(this);
+    });
     functionList.appendChild(span);
     fun.push(span);
 }
@@ -89,7 +94,7 @@ function mover() {
       if(item === "Right") goRight();
       if(item === "Up") goUp();
       if(item === "Down") goDown();
-      setTimeout(mover,3000);
+      setTimeout(mover,300);
   }  
   else myBlock.innerHTML = "Set Path" ;
 }
