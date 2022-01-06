@@ -12,6 +12,7 @@ const speedbtn = document.querySelector("#typingspeed");
 
 let startTime, endTime, date;
 
+
 btn.addEventListener("click", function () {
     if(this.innerText=="Start"){
         typedText.disabled = false;
