@@ -7,26 +7,75 @@
 }
 
 body {
+    background-color: #33ff00;
 }
 
-.car {
+.leftSide,
+.leftSide__top {
+    position: absolute;
+    background-image: url(images/side.jpg);
+    background-repeat: repeat-x;
+    background-size: 19rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+.leftSide__top {
+    top: -100%;
+}
+
+.game__startScreen,
+.score {
+    position: absolute;
+    max-height:  100%;
+    max-width: 100%;
+    border: 0.3rem solid red;
+    border-radius: 0.2rem;
+    background-color: #000;
+    color: aliceblue;
+    text-align: center;
+    padding: 1.5rem 0.3rem;
+    font-size: 5rem; 
+}
+
+.game__startScreen {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.car,
+.car__enemy {
     position: absolute;
     top: 100px;
     left: 50%;
     margin: auto;
-    width: 100px;
+    width: 70px;
     height: 150px;
     background-color:aquamarine;
     z-index: 1;
+    background-image: url(images/carmain.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100px;
 }
+
+.car__enemy {
+    background-color:#000;
+    height: 125px;
+    border-radius: 30px;
+}
+
 
 .game__playArea {
     position: relative;
-    background-color: #000;
+    background-color: grey;
     width: 300px;
     height: 100vh;
     margin: 0 auto;
     overflow: hidden;
+    opacity: 0.2;
 }
 
 .line {
