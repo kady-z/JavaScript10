@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.btn {
+    border: 2px solid #000;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: aqua;
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+}
