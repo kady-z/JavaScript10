@@ -6,6 +6,27 @@
     padding: 0;
 }
 
+body {
+    background-color: #000;
+}
+
+.gamearea {
+    margin-top: 10vh;
+}
+
+.page {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.starter {
+    margin: 0 auto;
+    width: 12rem;
+    padding: 3% auto;
+}
 
 .btn {
     border: 2px solid #000;
@@ -17,3 +38,45 @@
     font-size: 2rem;
     font-weight: bold;
 }
+
+.pop {
+    width: 6.25rem;
+    height: 6.25rem;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    background-color: honeydew;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.row {
+    display: block;
+}
+
+.active {
+    transform: scale(1.07);
+    transition: all 0.7s;
+    background-color:greenyellow;
+    border: 3px solid black;
+}
+
+.stats {
+    margin: 3% auto;
+    height: 5.25rem;
+    width: 10rem;
+    background-color: greenyellow;
+    color: #000;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+.stats span {
+    color: #000;
+} 
+
