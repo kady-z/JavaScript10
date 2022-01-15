@@ -67,7 +67,8 @@ body {
 
 .stats {
     margin: 3% auto;
-    height: 5.25rem;
+    height: 8.25rem;
+    list-style: 2.75rem;
     width: 10rem;
     background-color: greenyellow;
     color: #000;

@@ -1,9 +1,7 @@
 const playArea = { };
 const player = { };
 
-let emojis = [0x1F600, 0x1F604, 0x1F34A, 0x1F344, 0x1F37F, 0x1F363, 0x1F370, 0x1F355,
-    0x1F354, 0x1F35F, 0x1F6C0, 0x1F48E, 0x1F5FA, 0x23F0, 0x1F579, 0x1F4DA,
-    0x1F431, 0x1F42A, 0x1F439, 0x1F424];
+let emojis = [0x1F600,0x1F604,0x1F605,0X1F606,0X1F602,0X1F609, 0X1F607, 0X1F617,0X1F619, 0X1F61D, 0X1F60E, 0X1F913, 0X1F9D0, 0X1F973, 0X1F60D, 0X1F972];
 
 playArea.stats = document.querySelector(".stats");
 playArea.main = document.querySelector(".main");
@@ -22,7 +20,7 @@ function getData () {
 }
 
 function updateScore () {
-    playArea.scorer.innerHTML = "Score: " + player.score +"<br>"+ "Lives: "+player.items;
+    playArea.scorer.innerHTML = "Score: " + player.score +"<br>"+ "Lives: "+player.items + "<br>" + "&#" + Math.floor(Math.random()*60 + 128512);
 }
 
 function buildBoard () {
@@ -77,7 +75,7 @@ function startPop () {
     newPop.classList.add("active");
     newPop.old = newPop.innerText;
     newPop.addEventListener("click", hitPop);
-    const time = Math.round(Math.random()*1500 + 250);
+    const time = Math.round(Math.random()*1500 + 750);
     const iconVal = Math.floor(Math.random()*emojis.length);
     let iconContainer = document.createElement("span");
     iconContainer.innerHTML = String.fromCodePoint(emojis[iconVal]);
