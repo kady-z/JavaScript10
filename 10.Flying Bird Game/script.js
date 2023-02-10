@@ -33,11 +33,11 @@ function playGame () {
         movePipes ();
         players.x = birdie.offsetLeft;
         players.y = birdie.offsetTop;
-        if((Keys.ArrowUp || Keys.Space ) && players.y>scoreScreen.clientHeight) players.y -=6;
-        if((!Keys.ArrowUp && !Keys.Space ) && players.y>=scoreScreen.clientHeight && players.y<gameArea.clientHeight-birdie.clientHeight) players.y +=10;
-        if(Keys.ArrowDown && players.y<gameArea.clientHeight - birdie.clientHeight) players.y += 6;
-        if(Keys.ArrowLeft && players.x>0) players.x -= 6;
-        if(Keys.ArrowRight && players.x<gameArea.clientWidth - birdie.clientWidth) players.x += 6;
+        if((Keys.ArrowUp || Keys.Space ) && players.y>scoreScreen.clientHeight) players.y -=4;
+        if((!Keys.ArrowUp && !Keys.Space ) && players.y>=scoreScreen.clientHeight && players.y<gameArea.clientHeight-birdie.clientHeight) players.y +=4;
+        if(Keys.ArrowDown && players.y<gameArea.clientHeight - birdie.clientHeight) players.y += 4;
+        if(Keys.ArrowLeft && players.x>0) players.x -= 4;
+        if(Keys.ArrowRight && players.x<gameArea.clientWidth - birdie.clientWidth) players.x += 4;
         birdie.style.top = players.y + 'px';
         birdie.style.left = players.x + 'px';
         if(players.y>gameArea.clientHeight-birdie.clientHeight) {
@@ -100,7 +100,7 @@ function gameOver () {
     players.gamestat = false;
     gameMsg.classList.remove("hide");
     birdEnd();
-    gameMsg.innerHTML= "Game Over";
+    gameMsg.innerHTML= "Game Over!! Click to Start Again!";
 }
 
 function pressOn (e) {
